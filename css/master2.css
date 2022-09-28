@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: #ddd;
+  display: grid;
+  grid-template: repeat(4, auto) / 1fr;
+  grid-template-areas:
+    "logo"
+    "img"
+    "main"
+    "footer";
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(257, 40%, 49%);
+}
+.img-div {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 1.5rem 0 1.5rem;
+  grid-area: logo;
+}
+.logo {
+  font-size: 3rem;
+  width: 5ch;
+}
+.screens {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.screen-img {
+  font-size: 2rem;
+  width: 17ch;
+}
+main {
+  font-family: "Open Sans";
+  color: white;
+  text-align: center;
+  grid-area: main;
+}
+h1 {
+  font-size: 1.5rem;
+  font-family: "Poppins";
+  width: 17ch;
+  margin: 1em auto;
+  margin-top: 0em;
+}
+main p {
+  width: 33ch;
+  margin: auto;
+  margin-bottom: 2em;
+}
+button {
+  font-size: 0.8rem;
+  background-color: #fff;
+  width: 27ch;
+  height: 5ch;
+  border-radius: 20px;
+  color: hsl(257, 40%, 49%);
+  border: white;
+  box-shadow: 0px 0px 10px 0px black;
+}
+button:active {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+footer {
+  grid-area: footer;
+  color: white;
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+footer ul li a i {
+  transform: scale(1.3);
+  color: white;
+  margin: 0 1em;
+}
+footer p {
+  font-size: 0.8rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer a {
+  color: black;
+}
+@media (min-width: 29em) and (max-width: 43em) {
+  .logo {
+    width: 7ch;
+  }
+  .screen-img {
+    font-size: 2rem;
+    width: 25ch;
+  }
+  h1 {
+    font-size: 2.1rem;
+  }
+  main p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5;
+  }
+  button {
+    font-size: 1rem;
+    border-radius: 40px;
+  }
+  footer ul {
+    width: 70%;
+    padding: 0 6rem;
+    margin: 1em 0;
+  }
+  footer ul li a i {
+    transform: scale(2);
+  }
+}
+@media (min-width: 43em) {
+  .screen-img {
+    font-size: 1.5rem;
+    width: 35ch;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  main p {
+    font-size: 1.5rem;
+  }
+  button {
+    font-size: 1.5rem;
+    border-radius: 40px;
+  }
+  .img-div {
+    align-items: flex-start;
+  }
+  .logo {
+    width: 9ch;
+  }
+  footer ul {
+    margin: 1em 0;
+  }
+  footer ul li a i {
+    transform: scale(2.5);
+    margin: 0 2em;
+  }
+}
+@media (min-width: 50em) {
+  body {
+    background-size: cover;
+  }
+  .img-div {
+    padding: 3rem 0 0 2rem;
+  }
+  .screen-img {
+    font-size: 2rem;
+    width: 35ch;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  main p {
+    font-size: 2rem;
+  }
+  .logo {
+    width: 10ch;
+  }
+  footer ul li a i {
+    transform: scale(3);
+    margin: 0 3em;
+  }
+}
+@media (min-width: 80em) {
+  body {
+    background-image: url(/images/bg-desktop.svg);
+    background-size: cover;
+    grid-template: auto 1fr auto / 1fr 1fr;
+    grid-template-areas:
+      "logo logo"
+      "img main"
+      "footer footer";
+  }
+  .logo {
+    margin-top: 0.2em;
+    margin-left: 2rem;
+    font-size: 6ch;
+  }
+  .screens {
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .screen-img {
+    width: 45vw;
+    margin-left: 4rem;
+    margin-bottom: -3em;
+    margin-top: -1em;
+  }
+  h1 {
+    font-size: 2.3rem;
+    margin: 0em 0 0.5em 0;
+    text-align: left;
+    margin-top: -1em;
+    opacity: 0.9;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    padding-left: 4em;
+  }
+  main p {
+    margin: 0 3em 1.2em 0;
+    text-align: left;
+    font-size: 1.2rem;
+    width: 50ch;
+    opacity: 0.8;
+  }
+  button {
+    font-size: 1.2rem;
+    width: 20ch;
+    border-radius: 40px;
+  }
+  footer ul {
+    justify-content: flex-end;
+    margin-right: 2em;
+  }
+  footer ul li a i {
+    transform: scale(2);
+    margin: 1em 2em;
+  }
+  footer ul li:nth-child(3) a i {
+    margin-right: 0em;
+  }
+}
+
+/* The Project should be done but when I narrow the lap screen the site crashes, dont forget to run tests on it  */
