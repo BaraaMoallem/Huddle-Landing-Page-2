@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  list-style: none;
+}
+body {
+  height: 100vh;
+  background-color: hsl(257, 40%, 49%);
+  font-family: "Open Sans";
+  background-image: url("../images/bg-desktop.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+h1 {
+  font: 600 2.5rem Poppins;
+  margin-bottom: 2vh;
+}
+article p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 7vh;
+  width: 25rem;
+}
+button {
+  padding: 2vmin 8vmin;
+  color: hsl(257, 40%, 49%);
+  border-radius: 30px;
+  font-size: 1.3rem;
+  border: none;
+  box-shadow: 0px 0px 5px 0px black;
+  margin-bottom: 10vmin;
+  cursor: pointer;
+}
+button:active {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+button:hover {
+  pointer-events: painted;
+}
+#logo {
+  position: absolute;
+  align-self: flex-start;
+  left: 0%;
+  margin: 8vmin 9vmin;
+  width: 25vmin;
+  /* change what's above */
+}
+footer {
+  width: 100%;
+  position: absolute;
+  align-self: flex-end;
+}
+
+footer ul {
+  display: flex;
+  position: absolute;
+  right: 5vmin;
+  bottom: 5vmin;
+}
+
+footer ul i {
+  transform: scale(2);
+  margin-left: 10vmin;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(258, 29%, 93%);
+}
+
+@media (max-width: 1440px) {
+}
+@media (max-width: 412px) {
+  #logo {
+    width: 9rem;
+  }
+  #screen {
+    width: 80%;
+    margin-top: 11vh;
+  }
+  article {
+    text-align: center;
+    margin-top: -2rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  article p {
+    font-size: 1rem;
+    padding: 0 9vw;
+    width: auto;
+  }
+  button {
+    width: 55%;
+    padding: 0.9rem;
+    font-size: 0.8rem;
+    transform: translateY(-70%);
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  footer ul {
+    position: initial;
+    order: -1;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+  }
+  footer ul i {
+    margin: 0;
+    transform: scale(1.2);
+  }
+  .attribution {
+    position: absolute;
+    margin-bottom: 1vh;
+  }
+}
